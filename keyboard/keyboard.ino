@@ -1,6 +1,14 @@
+/*5.2.19
+ Created and Designed by Zane Rickert and Tyson Watson
+  This program is going to be a 16% keyboard that
+  can send basic inputs to the computer.
+  Took some of the code from https://www.pjrc.com/teensy/td_libs_Keypad.html
+ */
+
+
 #include <Key.h>
 #include <Keypad.h>
-
+#include <Keyboard.h>
 
 const byte ROWS = 4; //four rows
 const byte COLS = 4; //three columns
@@ -17,13 +25,12 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 void setup(){
   Serial.begin(9600);
-  Serial.println('a');
+  Keyboard.write('a');
 }
 
 void loop(){
   char key = keypad.getKey();
-  Serial.println('a');
   if (key != NO_KEY){
-    Serial.println(key);
+    Keyboard.write(key);
   }
 }
