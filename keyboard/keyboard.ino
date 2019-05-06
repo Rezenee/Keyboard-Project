@@ -3,7 +3,7 @@
   This program is going to be a 16% keyboard that
   can send basic inputs to the computer.
   Took some of the code from https://www.pjrc.com/teensy/td_libs_Keypad.html
-
+AIMMMIICC ` ``  `AAEEEEEAAEICCDDDLGKBBBBBBCCKKKKKAEIAAAAAAAAAAAA
   MMMIIIIMCGGKKOOPLHDAEEIIIMMMKKDDDHHLPKKKKKGMEIACCDAAAAEEEEEEEEEEEEEEIIIIMIAAAAAAAEEEMMMMMIMMMMEEMEMEMMEEEMMEEMMMPPPLLP
  */
 
@@ -15,10 +15,10 @@
 const byte ROWS = 4; //four rows
 const byte COLS = 4; //three columns
 char keys[ROWS][COLS] = {
-  {'M','N',VK_LBUTTON,' '},
-  {'I','J','K', 'L'},
-  {'E','F','G', 'H'},
-  {'A','B','C', 'D'}                      
+  {'A','E','I','M'},
+  {'B','F','J', 'N'},
+  {'C','G','K', 193},
+  {'D','H','L', ' '}                      
 };
 byte rowPins[ROWS] = {6,7,8,9}; //connect to the row pinouts of the keypad
 byte colPins[COLS] = {2, 3, 4, 5}; //connect to the column pinouts of the keypad
