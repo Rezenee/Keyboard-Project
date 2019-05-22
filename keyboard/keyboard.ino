@@ -9,14 +9,13 @@
 #include "Key.h"
 #include <Keypad.h>
 #include <Keyboard.h>
-int change_layer = 0;
 const byte ROWS = 4; //four rows
 const byte COLS = 4; //three columns
 char keys[ROWS][COLS] = {
   {'7','4', '1',' '},
-  {'8','5', '2', 216},
-  {'9','6', '3', 215},
-  {178,176, 218, 217}                      
+  {'8','5', '2', 216}, //Left arrow
+  {'9','6', '3', 215}, //Right Arrow
+  {178,176, 218, 217} // Backspace, Enter, Up and Down arrow                     
 };
 byte rowPins[ROWS] = {6,7,8,9}; //connect to the row pinouts of the keypad
 byte colPins[COLS] = {2, 3, 4, 5}; //connect to the column pinouts of the keypad
